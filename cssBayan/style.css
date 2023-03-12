@@ -1,0 +1,157 @@
+body {
+    background-color: #F3F3F3;
+    color: #343434;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    margin-top: 7vh;
+    margin-bottom: 3vh;
+}
+
+.container {
+
+    width: 80%;
+    margin: 5vh auto;
+}
+
+.bayan {
+    color: #10236f;
+}
+
+.meme {
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+}
+.meme-text {
+    width: 95%;
+    flex-shrink: 0;
+
+    font-weight: 800;
+}
+
+
+.meme-label {
+    display: flex;
+    width: 100%;
+    padding: 3vw;
+    border-top: solid 1px #8E8B82;
+    cursor: pointer;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.meme-input {
+  display: none;
+  
+}
+
+.meme-input:checked ~.meme-label > .meme {
+    width: 100%;
+    height:fit-content;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    margin: 2rem auto;
+}
+
+.meme-input:checked ~.meme-label > .meme-text {
+    color: #343434;
+   
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    background-image: url("./assets/svg/icons8-plus-math-30.png");
+   background-size: 1em 1em;
+   transition: all 0.3s ease-in-out;
+ 
+  
+}
+
+.meme-text {
+    max-width: 90%;
+}
+
+.meme-input:checked ~ .meme-label > .icon {
+    background-image: url('./assets/svg/icons8-multiply-30.png');
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (min-width: 700px) {
+
+    body {
+        font-size: 1.2rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+.meme {
+        width: 70%;
+    }
+    .meme-input:checked ~.meme-label > .meme {
+        width: 70%;
+
+    }
+    
+}
+
+@media (min-width: 1200px) {
+
+    body {
+        font-size: 2rem;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .meme {
+        width: 70%;
+    }
+    .meme-input:checked ~.meme-label > .meme {
+        width: 70%;
+
+    }
+    
+.container {
+    width: 60vw;
+}
+
+}
+
+@media (hover:hover){
+
+        
+ .meme-label:hover > .meme {
+    width: 70%;
+    height:fit-content;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    margin: 2rem auto;
+}
+
+.meme-input:hover ~ .meme-label > .icon {
+    background-image: url('./assets/svg/icons8-multiply-30.png');
+    transition: all 0.3s ease-in-out;
+}
+
+.bayan:hover {
+    color: #343434;
+}
+
+
+}
+
+.bayan-item:active {
+    opacity: 0.5;
+}
